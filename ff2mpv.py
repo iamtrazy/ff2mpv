@@ -12,7 +12,7 @@ def main():
     message = get_message()
     url = message.get("url")
 
-    args = ["mpv", "--no-terminal", "--", url]
+    args = ["gnome-session-inhibit", "mpv", "--no-terminal", "--player-operation-mode=pseudo-gui", "--", url]
 
     kwargs = {}
     # https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#Closing_the_native_app
